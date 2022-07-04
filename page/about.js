@@ -37,13 +37,6 @@ $(document).ready(function () {
         $('.navbar .menu').toggleClass("active");
         $('.menu-btn i').toggleClass("active");
     });
-    // typing text animation script
-    var typed = new Typed(".typing", {
-        strings: ["各大教學平台", "政府學習資源", "精選YT頻道", "網路學習資源"],
-        typeSpeed: 100,
-        backSpeed: 60,
-        loop: true
-    });
 
     // owl carousel script
     $('.carousel').owlCarousel({

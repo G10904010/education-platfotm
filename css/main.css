@@ -279,23 +279,26 @@ footer span a:hover {
 /* BELOW 544px (Phones) */
 /**************************/
 @media (max-width: 34em) {
-  .section-banner .max-width {
-    margin-left: 0.5rem; }
-  .section-banner .title {
-    font-size: 2.5rem;
-    font-weight: bolder;
-    color: #fff; }
-  .section-banner .text {
-    font-size: 3rem;
-    font-weight: bolder;
-    color: #fff;
-    margin-top: 1.5rem; }
+  .section-banner {
+    height: 50vh; }
+    .section-banner .max-width {
+      margin-left: 0.5rem; }
+    .section-banner .title {
+      font-size: 2.5rem;
+      font-weight: bolder;
+      color: #fff; }
+    .section-banner .text {
+      font-size: 3rem;
+      font-weight: bolder;
+      color: #fff;
+      margin-top: 1.5rem; }
   .section-info {
     grid-template-columns: 1fr;
     display: grid; }
     .section-info .info-content-left {
       padding-top: 3rem;
-      font-size: 2.5rem; }
+      font-size: 2.5rem;
+      padding-left: 3rem; }
       .section-info .info-content-left .text-2 {
         margin-top: 2.5rem; }
     .section-info .info-content-right img {
@@ -330,6 +333,26 @@ footer span a:hover {
         width: 23rem;
         display: block;
         margin: auto; } }
+
+/**************************/
+/* BELOW 420px (Phones) */
+/**************************/
+@media (max-width: 420px) {
+  .navbar .logo a {
+    font-size: 1.8rem; }
+  .section-banner {
+    height: 50vh; }
+  .section-info .info-content-left {
+    padding-left: 3rem; }
+  .section-special .text {
+    font-size: 2.5rem;
+    margin-left: 10%; }
+    .section-special .text span {
+      color: #9f4f29; }
+  .section-special .special-content {
+    padding: 0 1rem; }
+  footer {
+    font-size: 1rem; } }
 
 /* 
 - Font sizes (px)

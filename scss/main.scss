@@ -390,6 +390,7 @@ footer span a:hover {
 
 @media (max-width: 34em) {
   .section-banner{
+    height: 50vh;
     .max-width{
         margin-left: 0.5rem;
     }
@@ -409,8 +410,9 @@ footer span a:hover {
   grid-template-columns: 1fr;
   display: grid;
   .info-content-left{
-    padding-top: 3rem;
+      padding-top: 3rem;
       font-size: 2.5rem;
+      padding-left: 3rem;
 
       .text-2{
           margin-top: 2.5rem;
@@ -463,6 +465,41 @@ footer span a:hover {
 }
 }
 
+/**************************/
+/* BELOW 420px (Phones) */
+/**************************/
+
+@media (max-width: 420px) {
+  .navbar{
+    .logo a{
+      font-size: 1.8rem;
+    }
+  }
+  .section-banner{
+    height: 50vh;
+}
+.section-info{
+  .info-content-left{
+      padding-left: 3rem;
+  }
+}
+
+.section-special{
+  .text{
+      font-size: 2.5rem;
+      margin-left: 10%;
+      span{
+          color: $nav-hover-color;
+      }
+  }
+  .special-content{
+      padding: 0 1rem;
+  }
+}
+footer {
+  font-size: 1.5rem;
+}
+}
 /* 
 - Font sizes (px)
 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
