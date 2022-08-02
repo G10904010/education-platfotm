@@ -1,0 +1,413 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none; }
+
+/* 
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+html {
+  /* font-size: 10px; */
+  /* 10px / 16px = 0.625 = 62.5% */
+  /* Percentage of user's browser font-size setting */
+  font-size: 62.5%; }
+
+body {
+  background-color: #FFFBEE; }
+
+.max-width {
+  max-width: 1300px;
+  padding: 0 5rem;
+  margin: auto; }
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  font-family: 'Ubuntu', sans-serif;
+  padding: 3rem 0;
+  transition: all 0.3s ease;
+  z-index: 9999;
+  background-color: #2e2e2e; }
+  .navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+  .navbar .menu li {
+    list-style: none;
+    display: inline-block; }
+    .navbar .menu li a {
+      color: #fff;
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-left: 2.5rem;
+      transition: color 0.3s ease; }
+      .navbar .menu li a:hover {
+        color: #9f4f29; }
+  .navbar .logo a {
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: 600; }
+    .navbar .logo a span {
+      color: #9f4f29; }
+
+/* navbar-sticky */
+.navbar.sticky {
+  padding: 15px 0; }
+  .navbar.sticky .logo a {
+    transition: all 0.3s ease; }
+    .navbar.sticky .logo a span {
+      transition: all 0.3s ease; }
+  .navbar.sticky .menu-btn {
+    color: #fff;
+    transition: all 0.3s ease; }
+
+/* menu button */
+.menu-btn {
+  color: #fff;
+  font-size: 23px;
+  cursor: pointer;
+  display: none; }
+
+.scroll-up-btn {
+  position: fixed;
+  height: 45px;
+  width: 42px;
+  background: #9f4f29;
+  right: 30px;
+  bottom: 10px;
+  text-align: center;
+  line-height: 45px;
+  color: #fff;
+  z-index: 9999;
+  font-size: 30px;
+  border-radius: 6px;
+  border-bottom-width: 2px;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease; }
+
+.scroll-up-btn.show {
+  bottom: 30px;
+  opacity: 1;
+  pointer-events: auto; }
+
+.scroll-up-btn:hover {
+  filter: brightness(90%); }
+
+.section-about-banner {
+  display: flex;
+  background: url("../img/contact.png") no-repeat center;
+  background-size: cover;
+  height: 50vh; }
+
+.section-aboutus .contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 8rem 0; }
+  .section-aboutus .contact-content .content-left .about-content-header {
+    display: grid;
+    grid-template-columns: 35fr 30fr 35fr; }
+    .section-aboutus .contact-content .content-left .about-content-header .about-header-left {
+      height: 5px;
+      width: 80%;
+      background-color: #2e2e2e;
+      margin: 9rem auto; }
+    .section-aboutus .contact-content .content-left .about-content-header .about-header-mid {
+      font-family: 'Noto Sans SC';
+      font-size: 2rem;
+      font-weight: 600;
+      color: #2e2e2e;
+      margin: 5rem 0; }
+      .section-aboutus .contact-content .content-left .about-content-header .about-header-mid h1 {
+        text-align: center;
+        letter-spacing: 2rem; }
+        .section-aboutus .contact-content .content-left .about-content-header .about-header-mid h1 span {
+          letter-spacing: 0rem; }
+      .section-aboutus .contact-content .content-left .about-content-header .about-header-mid h3 {
+        text-align: center;
+        letter-spacing: 1.5rem;
+        font-family: 'Ubuntu', sans-serif; }
+        .section-aboutus .contact-content .content-left .about-content-header .about-header-mid h3 span {
+          letter-spacing: 0rem; }
+    .section-aboutus .contact-content .content-left .about-content-header .about-header-right {
+      height: 5px;
+      width: 80%;
+      background-color: #2e2e2e;
+      margin: 9rem auto; }
+  .section-aboutus .contact-content .content-left p {
+    padding: 3rem 0;
+    margin: 0 auto;
+    font-size: 2rem;
+    width: 80%; }
+  .section-aboutus .contact-content .content-right {
+    width: 80%;
+    padding-top: 9rem;
+    margin-left: 4rem; }
+    .section-aboutus .contact-content .content-right form .fields {
+      display: flex; }
+      .section-aboutus .contact-content .content-right form .fields .field {
+        height: 45px;
+        width: 100%;
+        margin-bottom: 15px; }
+    .section-aboutus .contact-content .content-right form .field {
+      height: 45px;
+      width: 100%;
+      margin-bottom: 15px; }
+      .section-aboutus .contact-content .content-right form .field input {
+        height: 100%;
+        width: 100%;
+        border: 1px solid lightgrey;
+        border-radius: 6px;
+        outline: none;
+        padding: 0 15px;
+        font-size: 17px;
+        font-family: 'Poppins', sans-serif;
+        transition: all 0.3s ease; }
+        .section-aboutus .contact-content .content-right form .field input:focus {
+          border-color: #b3b3b3; }
+    .section-aboutus .contact-content .content-right form .button-area {
+      display: flex;
+      align-items: center; }
+    .section-aboutus .contact-content .content-right form .name {
+      margin-right: 10px; }
+    .section-aboutus .contact-content .content-right form .textarea {
+      height: 80px;
+      width: 100%; }
+      .section-aboutus .contact-content .content-right form .textarea textarea {
+        height: 100%;
+        width: 100%;
+        border: 1px solid lightgrey;
+        border-radius: 6px;
+        outline: none;
+        padding: 0 15px;
+        font-size: 17px;
+        font-family: 'Poppins', sans-serif;
+        transition: all 0.3s ease;
+        padding-top: 10px;
+        resize: none; }
+        .section-aboutus .contact-content .content-right form .textarea textarea:focus {
+          border-color: #b3b3b3; }
+    .section-aboutus .contact-content .content-right form .button-area {
+      display: flex;
+      align-items: center; }
+      .section-aboutus .contact-content .content-right form .button-area button {
+        color: #fff;
+        display: block;
+        width: 160px !important;
+        height: 45px;
+        outline: none;
+        font-size: 18px;
+        font-weight: 500;
+        border-radius: 6px;
+        cursor: pointer;
+        flex-wrap: nowrap;
+        background: #523528;
+        border: 2px solid #523528;
+        transition: all 0.3s ease; }
+        .section-aboutus .contact-content .content-right form .button-area button:hover {
+          color: #523528;
+          background: none; }
+
+footer {
+  background: #2e2e2e;
+  padding: 30px 23px;
+  color: #fff;
+  text-align: center;
+  font-size: 2rem;
+  font-family: 'Ubuntu', sans-serif; }
+
+footer span a {
+  color: #fff;
+  text-decoration: none; }
+
+footer span a:hover {
+  text-decoration: underline; }
+
+/* rem and em do NOT depend on html font-size in media queries! Instead, 1rem = 1em = 16px */
+/**************************/
+/* BELOW 1344px (Smaller desktops) */
+/**************************/
+/**************************/
+/* BELOW 1200px (Landscape Tablets) */
+/**************************/
+/**************************/
+/* BELOW 944px (Tablets) */
+/**************************/
+@media (max-width: 59em) {
+  .navbar .max-width {
+    padding: 0 3rem; }
+  .navbar .logo a {
+    font-size: 3rem;
+    font-weight: 600; }
+    .navbar .logo a span {
+      color: #9f4f29; }
+  .navbar .menu {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    left: -100%;
+    top: 0;
+    background: #111;
+    text-align: center;
+    padding-top: 80px;
+    transition: all 0.3s ease; }
+    .navbar .menu li {
+      display: block; }
+      .navbar .menu li a {
+        color: #fff;
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px; }
+        .navbar .menu li a:hover {
+          color: #9f4f29; }
+    .navbar .menu.active {
+      left: 0; }
+  .menu-btn {
+    display: block;
+    z-index: 999; }
+    .menu-btn i.active:before {
+      content: '\f00d'; }
+  .max-width {
+    padding: 0 5rem; }
+  .section-about-banner {
+    height: 30vh; }
+  .section-aboutus .about-content-header {
+    display: grid;
+    grid-template-columns: 30fr 40fr 30fr; }
+    .section-aboutus .about-content-header .about-header-mid {
+      font-size: 2rem; }
+      .section-aboutus .about-content-header .about-header-mid h1 {
+        text-align: center;
+        letter-spacing: 2rem; }
+        .section-aboutus .about-content-header .about-header-mid h1 span {
+          letter-spacing: 0rem; }
+      .section-aboutus .about-content-header .about-header-mid h3 {
+        text-align: center;
+        letter-spacing: 1.5rem;
+        font-family: 'Ubuntu', sans-serif; }
+        .section-aboutus .about-content-header .about-header-mid h3 span {
+          letter-spacing: 0rem; }
+  .section-aboutus p {
+    padding-top: 3rem;
+    font-size: 2rem;
+    width: 80%; } }
+
+/**************************/
+/* BELOW 704px (Smaller tablets) */
+/**************************/
+@media (max-width: 44em) {
+  .max-width {
+    padding: 0 2rem; }
+  .section-aboutus .about-content-header {
+    display: grid;
+    grid-template-columns: 25fr 50fr 25fr; }
+    .section-aboutus .about-content-header .about-header-left {
+      height: 4px;
+      margin: 8rem 0; }
+    .section-aboutus .about-content-header .about-header-mid {
+      font-size: 1.5rem; }
+      .section-aboutus .about-content-header .about-header-mid h1 {
+        text-align: center;
+        letter-spacing: 1.5rem; }
+        .section-aboutus .about-content-header .about-header-mid h1 span {
+          letter-spacing: 0rem; }
+      .section-aboutus .about-content-header .about-header-mid h3 {
+        text-align: center;
+        letter-spacing: 1.2rem;
+        font-family: 'Ubuntu', sans-serif; }
+        .section-aboutus .about-content-header .about-header-mid h3 span {
+          letter-spacing: 0rem; }
+    .section-aboutus .about-content-header .about-header-right {
+      height: 4px;
+      margin: 8rem 0; }
+  .section-aboutus p {
+    padding-top: 3rem;
+    font-size: 2rem;
+    width: 80%; }
+  .section-aboutus .contact-content {
+    grid-template-columns: 1fr; }
+  footer {
+    font-size: 2rem; } }
+
+/**************************/
+/* BELOW 544px (Phones) */
+/**************************/
+@media (max-width: 34em) {
+  .section-aboutus .about-content-header {
+    display: grid;
+    grid-template-columns: 25fr 50fr 25fr; }
+    .section-aboutus .about-content-header .about-header-left {
+      height: 4px;
+      margin: 8rem 0; }
+    .section-aboutus .about-content-header .about-header-mid {
+      font-size: 1.5rem; }
+      .section-aboutus .about-content-header .about-header-mid .text h1 {
+        text-align: center;
+        letter-spacing: 1.5rem; }
+        .section-aboutus .about-content-header .about-header-mid .text h1 span {
+          letter-spacing: 0rem; }
+      .section-aboutus .about-content-header .about-header-mid .text h3 {
+        text-align: center;
+        letter-spacing: 1rem;
+        font-family: 'Ubuntu', sans-serif; }
+        .section-aboutus .about-content-header .about-header-mid .text h3 span {
+          letter-spacing: 0rem; }
+    .section-aboutus .about-content-header .about-header-right {
+      height: 4px;
+      margin: 8rem 0; }
+  .section-aboutus p {
+    padding-top: 3rem;
+    font-size: 2rem;
+    width: 80%; }
+  footer {
+    font-size: 1.5rem; } }
+
+/**************************/
+/* BELOW 420px (Phones) */
+/**************************/
+@media (max-width: 420px) {
+  .navbar .logo a {
+    font-size: 1.8rem; }
+  .section-aboutus .about-content-header {
+    display: grid;
+    grid-template-columns: 20fr 60fr 20fr; }
+    .section-aboutus .about-content-header .about-header-left {
+      height: 4px;
+      margin: 8rem 0; }
+    .section-aboutus .about-content-header .about-header-mid {
+      font-size: 1.5rem; }
+      .section-aboutus .about-content-header .about-header-mid .text h1 {
+        text-align: center;
+        letter-spacing: 1.5rem; }
+        .section-aboutus .about-content-header .about-header-mid .text h1 span {
+          letter-spacing: 0rem; }
+      .section-aboutus .about-content-header .about-header-mid .text h3 {
+        text-align: center;
+        letter-spacing: 1rem;
+        font-family: 'Ubuntu', sans-serif; }
+        .section-aboutus .about-content-header .about-header-mid .text h3 span {
+          letter-spacing: 0rem; }
+    .section-aboutus .about-content-header .about-header-right {
+      height: 4px;
+      margin: 8rem 0; }
+  .section-aboutus p {
+    padding-top: 3rem;
+    font-size: 2rem;
+    width: 80%; }
+  footer {
+    font-size: 1.2rem; } }
+
+/* 
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/

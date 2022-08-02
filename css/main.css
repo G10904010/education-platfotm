@@ -12,6 +12,9 @@
 - Spacing system (px)
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 */
+body {
+  background-color: #FFFBEE; }
+
 html {
   /* font-size: 10px; */
   /* 10px / 16px = 0.625 = 62.5% */
@@ -30,7 +33,7 @@ html {
   padding: 3rem 0;
   transition: all 0.3s ease;
   z-index: 9999;
-  background-color: #fff; }
+  background-color: #2e2e2e; }
   .navbar .max-width {
     display: flex;
     align-items: center;
@@ -39,7 +42,7 @@ html {
     list-style: none;
     display: inline-block; }
     .navbar .menu li a {
-      color: #2e2e2e;
+      color: #fff;
       font-size: 1.8rem;
       font-weight: 700;
       margin-left: 2.5rem;
@@ -47,7 +50,7 @@ html {
       .navbar .menu li a:hover {
         color: #9f4f29; }
   .navbar .logo a {
-    color: #2e2e2e;
+    color: #fff;
     font-size: 2.5rem;
     font-weight: 600; }
     .navbar .logo a span {
@@ -61,12 +64,12 @@ html {
     .navbar.sticky .logo a span {
       transition: all 0.3s ease; }
   .navbar.sticky .menu-btn {
-    color: #333;
+    color: #fff;
     transition: all 0.3s ease; }
 
 /* menu button */
 .menu-btn {
-  color: #333;
+  color: #fff;
   font-size: 23px;
   cursor: pointer;
   display: none; }
@@ -352,7 +355,7 @@ footer span a:hover {
   .section-special .special-content {
     padding: 0 1rem; }
   footer {
-    font-size: 1rem; } }
+    font-size: 1.5rem; } }
 
 /* 
 - Font sizes (px)

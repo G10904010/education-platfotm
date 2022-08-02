@@ -5,7 +5,9 @@
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-css": "node-sass -w scss/about.scss css/about.css"
+    "build-css-about": "node-sass -w scss/about.scss css/about.css",
+    "build-css-contact": "node-sass -w scss/contact.scss css/contact.css",
+    "build-css": "node-sass -w scss/main.scss css/main.css"
   },
   "author": "",
   "license": "ISC",
