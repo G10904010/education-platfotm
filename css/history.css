@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none; }
+
+/* 
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+html {
+  /* font-size: 10px; */
+  /* 10px / 16px = 0.625 = 62.5% */
+  /* Percentage of user's browser font-size setting */
+  font-size: 62.5%; }
+
+body {
+  background-color: #FFFBEE; }
+
+.max-width {
+  max-width: 1300px;
+  padding: 0 8rem;
+  margin: auto; }
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  font-family: 'Ubuntu', sans-serif;
+  padding: 3rem 0;
+  transition: all 0.3s ease;
+  z-index: 9999;
+  background-color: #2e2e2e; }
+  .navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+  .navbar .menu li {
+    list-style: none;
+    display: inline-block; }
+    .navbar .menu li a {
+      color: #fff;
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-left: 2.5rem;
+      transition: color 0.3s ease; }
+      .navbar .menu li a:hover {
+        color: #9f4f29; }
+  .navbar .logo a {
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: 600; }
+    .navbar .logo a span {
+      color: #9f4f29; }
+
+/* navbar-sticky */
+.navbar.sticky {
+  padding: 15px 0; }
+  .navbar.sticky .logo a {
+    transition: all 0.3s ease; }
+    .navbar.sticky .logo a span {
+      transition: all 0.3s ease; }
+  .navbar.sticky .menu-btn {
+    color: #fff;
+    transition: all 0.3s ease; }
+
+/* menu button */
+.menu-btn {
+  color: #fff;
+  font-size: 23px;
+  cursor: pointer;
+  display: none; }
+
+.scroll-up-btn {
+  position: fixed;
+  height: 45px;
+  width: 42px;
+  background: #9f4f29;
+  right: 30px;
+  bottom: 10px;
+  text-align: center;
+  line-height: 45px;
+  color: #fff;
+  z-index: 9999;
+  font-size: 30px;
+  border-radius: 6px;
+  border-bottom-width: 2px;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease; }
+
+.scroll-up-btn.show {
+  bottom: 30px;
+  opacity: 1;
+  pointer-events: auto; }
+
+.scroll-up-btn:hover {
+  filter: brightness(90%); }
+
+.section-top {
+  height: 20vh; }
+
+.section-select {
+  width: 100vw; }
+
+.section-history .history-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: 3rem 0; }
+  .section-history .history-content .history-card {
+    margin: 1.5rem 3rem;
+    height: 40rem;
+    width: 30rem;
+    background: #F6F6F6;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px; }
+    .section-history .history-content .history-card .history-photo {
+      width: 30rem;
+      height: 15rem;
+      object-fit: cover; }
+    .section-history .history-content .history-card .name {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 2.5rem;
+      text-align: center; }
+    .section-history .history-content .history-card .tag {
+      margin: 1rem 0;
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 1.8rem;
+      text-align: center;
+      color: #3391FF; }
+    .section-history .history-content .history-card .words-list {
+      margin-top: 2rem;
+      margin-left: 6rem;
+      font-weight: 600;
+      font-size: 1.5rem; }
+
+footer {
+  background: #2e2e2e;
+  padding: 30px 23px;
+  color: #fff;
+  text-align: center;
+  font-size: 2rem;
+  font-family: 'Ubuntu', sans-serif; }
+
+footer span a {
+  color: #fff;
+  text-decoration: none; }
+
+footer span a:hover {
+  text-decoration: underline; }
+
+/* rem and em do NOT depend on html font-size in media queries! Instead, 1rem = 1em = 16px */
+/**************************/
+/* BELOW 1344px (Smaller desktops) */
+/**************************/
+/**************************/
+/* BELOW 1200px (Landscape Tablets) */
+/**************************/
+/**************************/
+/* BELOW 944px (Tablets) */
+/**************************/
+@media (max-width: 59em) {
+  .navbar .max-width {
+    padding: 0 3rem; }
+  .navbar .logo a {
+    font-size: 3rem;
+    font-weight: 600; }
+    .navbar .logo a span {
+      color: #9f4f29; }
+  .navbar .menu {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    left: -100%;
+    top: 0;
+    background: #111;
+    text-align: center;
+    padding-top: 80px;
+    transition: all 0.3s ease; }
+    .navbar .menu li {
+      display: block; }
+      .navbar .menu li a {
+        color: #fff;
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px; }
+        .navbar .menu li a:hover {
+          color: #9f4f29; }
+    .navbar .menu.active {
+      left: 0; }
+  .menu-btn {
+    display: block;
+    z-index: 999; }
+    .menu-btn i.active:before {
+      content: '\f00d'; }
+  .max-width {
+    padding: 0 5rem; } }
+
+/**************************/
+/* BELOW 704px (Smaller tablets) */
+/**************************/
+@media (max-width: 44em) {
+  .max-width {
+    padding: 0 2rem; }
+  footer {
+    font-size: 2rem; } }
+
+/**************************/
+/* BELOW 544px (Phones) */
+/**************************/
+@media (max-width: 34em) {
+  footer {
+    font-size: 1.5rem; } }
+
+/**************************/
+/* BELOW 420px (Phones) */
+/**************************/
+@media (max-width: 420px) {
+  .navbar .logo a {
+    font-size: 1.8rem; }
+  footer {
+    font-size: 1.2rem; } }
+
+/* 
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/

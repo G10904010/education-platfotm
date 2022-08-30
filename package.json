@@ -7,11 +7,14 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-css-about": "node-sass -w scss/about.scss css/about.css",
     "build-css-contact": "node-sass -w scss/contact.scss css/contact.css",
+    "build-css-FAQ": "node-sass -w scss/FAQ.scss css/FAQ.css",
+    "build-css-history": "node-sass -w scss/history.scss css/history.css",
     "build-css": "node-sass -w scss/main.scss css/main.css"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bootstrap": "^5.2.0",
     "node-sass": "^7.0.1"
   }
 }
